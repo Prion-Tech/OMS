@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      LOGGER_NAME: ${LOGGER_NAME}
+      LOG_LEVEL: ${LOG_LEVEL}
+      HTTPX_TIMEOUT: ${HTTPX_TIMEOUT}
+      SENTRY_DSN: ${SENTRY_DSN}
+      APP_ENV: ${APP_ENV}
+      APP_INSIGHT_CONNECTION_STRING: ${APP_INSIGHT_CONNECTION_STRING}

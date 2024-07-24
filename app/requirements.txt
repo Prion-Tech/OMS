@@ -1,0 +1,12 @@
+
+
+# Public packages
+python-json-logger~=2.0.7
+azure-monitor-opentelemetry-exporter~=1.0.0b27
+fastapi~=0.111.1
+opentelemetry-instrumentation-aiohttp-client~=0.46b0
+opentelemetry-instrumentation-fastapi~=0.46b0
+opentelemetry-instrumentation-requests~=0.46b0
+opentelemetry-instrumentation-httpx~=0.46b0
+opentelemetry-sdk~=1.25.0
+aiohttp~=3.9.5
