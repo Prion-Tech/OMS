@@ -1,7 +1,7 @@
+import logging
 import sys
 from io import IOBase
 from typing import Union
-import logging
 
 from pythonjsonlogger import jsonlogger
 

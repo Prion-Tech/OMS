@@ -2,13 +2,14 @@ import os
 
 from azure.monitor.opentelemetry.exporter import AzureMonitorTraceExporter
 from fastapi import FastAPI
-from opentelemetry.instrumentation.aiohttp_client import AioHttpClientInstrumentor
+from opentelemetry.instrumentation.aiohttp_client import \
+    AioHttpClientInstrumentor
 from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
-from opentelemetry.instrumentation.requests import RequestsInstrumentor
 from opentelemetry.instrumentation.httpx import HTTPXClientInstrumentor
+from opentelemetry.instrumentation.requests import RequestsInstrumentor
 from opentelemetry.sdk.trace import ReadableSpan, TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
-from opentelemetry.trace import set_tracer_provider, SpanKind
+from opentelemetry.trace import SpanKind, set_tracer_provider
 
 
 class GrantonTracerError(Exception):
