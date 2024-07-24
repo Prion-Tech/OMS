@@ -6,7 +6,8 @@ COPY ./app/requirements.txt /code/app
 RUN pip install --no-cache-dir --upgrade -r /code/app/requirements.txt
 
 COPY ./app /code/app
+COPY ./GrantonLogTrace /code/GrantonLogTrace
 
 ENV PYTHONPATH=/code
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2", "--log-level", "error"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2", "--log-level", "info"]
